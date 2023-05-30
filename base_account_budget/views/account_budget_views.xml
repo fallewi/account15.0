@@ -23,7 +23,7 @@
     </record>
 
     <record id="open_budget_post_form" model="ir.actions.act_window">
-        <field name="name">Budgetary Positions</field>
+        <field name="name"> Positions Budgetaires</field>
         <field name="res_model">account.budget.post</field>
         <field name="view_mode">tree,kanban,form</field>
         <field name="view_id" ref="view_budget_post_tree"/>
@@ -74,7 +74,7 @@
                     <button string="Cancel Budget" name="action_budget_cancel" states="confirm,validate" type="object"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,confirm"/>
                 </header>
-                <sheet string="Budget">
+                <sheet string="Budget COVAGRO">
                     <div class="oe_title">
                         <label for="name" class="oe_edit_only"/>
                         <h1>
@@ -98,11 +98,11 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Budget Lines">
+                        <page string="Lignes de Budjet">
                             <field name="budget_line"
                                    context="{'default_date_from': date_from,'default_date_to': date_to}" colspan="4"
                                    nolabel="1" attrs="{'readonly':[('state','!=','draft')]}">
-                                <tree string="Budget Lines">
+                                <tree string="Lignes de Budjet">
                                     <field name="general_budget_id"/>
                                     <field name="analytic_account_id" groups="analytic.group_analytic_accounting"
                                            required="1"/>
@@ -114,7 +114,7 @@
                                     <field name="theoretical_amount" sum="Theoretical Amount" widget="monetary"/>
                                     <field name="percentage"/>
                                 </tree>
-                                <form string="Budget Lines">
+                                <form string="Lignes de Budjet">
                                     <group>
                                         <group>
                                             <field name="general_budget_id"/>
@@ -210,13 +210,13 @@
     </record>
 
     <record model="ir.actions.act_window" id="act_budget_view">
-        <field name="name">Budgets</field>
+        <field name="name">Budjets COVAGRO</field>
         <field name="res_model">budget.budget</field>
         <field name="view_mode">tree,kanban,form</field>
         <field name="view_id" ref="budget_budget_view_tree"/>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
-                Click to create a new budget.
+                CRéer un nouveau Budjet COVAGRO.
             </p>
             <p>
                 A budget is a forecast of your company's income and/or expenses
@@ -243,7 +243,7 @@
         <field name="name">account.budget.line.search</field>
         <field name="model">budget.lines</field>
         <field name="arch" type="xml">
-            <search string="Budget Lines">
+            <search string="Lignes de Budjet">
                 <field name="analytic_account_id"/>
             </search>
         </field>
@@ -253,7 +253,7 @@
         <field name="name">budget.line.tree</field>
         <field name="model">budget.lines</field>
         <field name="arch" type="xml">
-            <tree string="Budget Lines">
+            <tree string="COVAGRO Lignes de Budjet">
                 <field name="budget_id" invisible="1"/>
                 <field name="general_budget_id"/>
                 <field name="analytic_account_id" groups="analytic.group_analytic_accounting"/>
@@ -271,7 +271,7 @@
         <field name="name">budget.line.form</field>
         <field name="model">budget.lines</field>
         <field name="arch" type="xml">
-            <form string="Budget Lines">
+            <form string="Lignes de Budjet">
                 <sheet>
                     <group col="4">
                         <field name="budget_id"/>
@@ -292,7 +292,7 @@
     </record>
 
     <record model="ir.actions.act_window" id="act_budget_lines_view">
-        <field name="name">Budgets</field>
+        <field name="name">Budjets COVAGRO</field>
         <field name="res_model">budget.lines</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="view_budget_line_tree"/>

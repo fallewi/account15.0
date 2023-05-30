@@ -1,30 +1,9 @@
 # -*- coding: utf-8 -*-
-#############################################################################
-#
-#    Cybrosys Technologies Pvt. Ltd.
-#
-#    Copyright (C) 2021-TODAY Cybrosys Technologies(<https://www.cybrosys.com>)
-#    Author: Cybrosys Techno Solutions(<https://www.cybrosys.com>)
-#
-#    You can modify it under the terms of the GNU LESSER
-#    GENERAL PUBLIC LICENSE (LGPL v3), Version 3.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU LESSER GENERAL PUBLIC LICENSE (LGPL v3) for more details.
-#
-#    You should have received a copy of the GNU LESSER GENERAL PUBLIC LICENSE
-#    (LGPL v3) along with this program.
-#    If not, see <http://www.gnu.org/licenses/>.
-#
-#############################################################################
 
 {
-    'name': 'Odoo 15 Full Accounting Kit',
+    'name': 'COVAGRO ACCOUNT',
     'version': '15.0.2.2.4',
     'category': 'Accounting',
-    'live_test_url': 'https://www.youtube.com/watch?v=peAp2Tx_XIs',
     'summary': """ Asset and Budget Management,
                  Accounting Reports, PDC, Lock dates,
                  Credit Limit, Follow Ups,
@@ -46,10 +25,8 @@
                     Reconciliation Widget For Odoo15,
                     Payments Matching
                     """,
-    'author': 'Cybrosys Techno Solutions, Odoo SA',
-    'website': "https://www.cybrosys.com",
-    'company': 'Cybrosys Techno Solutions',
-    'maintainer': 'Cybrosys Techno Solutions',
+    'author': 'Fall Lewis YOMBA',
+    'maintainer': 'Fall Lewis YOMBA',
     'depends': ['base', 'account', 'sale', 'account_check_printing', 'base_account_budget'],
     'data': [
         'security/ir.model.access.csv',
@@ -133,7 +110,6 @@
         ],
     },
     'license': 'LGPL-3',
-    'images': ['static/description/banner.gif'],
     'installable': True,
     'auto_install': False,
     'application': True,
